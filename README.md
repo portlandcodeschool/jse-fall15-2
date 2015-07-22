@@ -18,6 +18,12 @@ Revisit your solution to homework #1, problem 5, which expresses an improper fra
 Note that _returning_ a string is not the same as _printing_ a string.  You may use `console.log()` for debugging, but your function should have the correct string as its return value.
 You can also print your return value with an expression like `console.log(fractionString(7,4))`.
 
+ var fractionString = function(n,d) {
+ return (n/d) - ((n/d)%1) + ' ' + (n%d) + "/" + d;
+ };
+ 
+ fractionString (7,4)
+
 **b)** Write a second version of your function which improves the output in two special cases:
 
 - A output string like "0 1/2" should be simplified to just "1/2";

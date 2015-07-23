@@ -2,6 +2,9 @@ Hey everyone!
 
 I'm excited to be a part of this class! Feel free to connect with me via twitter <a href='https://twitter.com/stephenprintup' target='_blank'>@stephenprintup</a> or my blog at <a href='http://www.stephenprintup.com' target='_blank'>www.stephenprintup.com</a>
 
+Some things I'm working on are:
+Node Repl: How do I create an environment that will run js files? 
+
 ### Homework #2
 
 Due Monday, 7/27
@@ -21,6 +24,7 @@ Revisit your solution to homework #1, problem 5, which expresses an improper fra
 
 Note that _returning_ a string is not the same as _printing_ a string.  You may use `console.log()` for debugging, but your function should have the correct string as its return value.
 You can also print your return value with an expression like `console.log(fractionString(7,4))`.
+
 
 **b)** Write a second version of your function which improves the output in two special cases:
 

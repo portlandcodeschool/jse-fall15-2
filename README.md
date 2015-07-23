@@ -3,8 +3,12 @@ Hey everyone!
 I'm excited to be a part of this class! Feel free to connect with me via twitter <a href='https://twitter.com/stephenprintup' target='_blank'>@stephenprintup</a> or my blog at <a href='http://www.stephenprintup.com' target='_blank'>www.stephenprintup.com</a>
 
 Some things I'm working on are:
-Node Repl: How do I create an environment that will run js files? 
-
+<ul>
+  <li>Node Repl: How do I create an environment that will run js files? I'm currently waiting for firefox to download, but the <li>
+  <li>Question 1b still needs to be worked out</li>
+  <li></li>
+  <li></li>
+  <li></li>
 ### Homework #2
 
 Due Monday, 7/27

@@ -1,8 +1,8 @@
-// **1)** _(Easy, 10% of total time)_
+// []**1)** _(Easy, 10% of total time)_
 
 // Revisit your solution to homework #1, problem 5, which expresses an improper fraction as a proper one, and turn your solution into a function.
 
-// **a)** Write a function `fractionString(n,d)` which takes 2 parameters (n,d) and returns a string.  For example, 
+// [X]**a)** Write a function `fractionString(n,d)` which takes 2 parameters (n,d) and returns a string.  For example, 
 // `fractionString(7,4)` should return "1 3/4", and `fractionString(3,3)` should (for now) return "1 0/3".  As before, assume that _n_ and _d_ are both positive integers.
 
 // Note that _returning_ a string is not the same as _printing_ a string.  You may use `console.log()` for debugging, but your function should have the correct string as its return value.
@@ -19,29 +19,31 @@ fractionString (7, 4)
 fractionString (3, 3)  
 
 
-// **b)** Write a second version of your function which improves the output in two special cases:
+// []**b)** Write a second version of your function which improves the output in two special cases:
 
 // - A output string like "0 1/2" should be simplified to just "1/2";
 // - A output string like "1 0/3" should be simplified to just "1".
+var n = numerator;
+var d = denominator;
 
 function fractionString(n,d) {
-	var whole = (n-(n%d))/d) + " ";
+	var whole = ((n-(n%d))/d) + " ";
 	var partial = n%d + "/" + d);
-	var string = (
+	var string = 
 		if (n>d) {
-			whole + partial;
+			whole + partial
 		} else if (n = d) {
 			whole
 		} else { 
-			partial;
-		}
-	)
+			partial
+		};
+	
 		
-		return string
-}
+		return string;
+};
 
-fractionString (1, 2) //"0 1/2"
-fractionString (3, 3) //"1 0/3"
+fractionString (1, 2); //"0 1/2"
+fractionString (3, 3); //"1 0/3"
 
 
 

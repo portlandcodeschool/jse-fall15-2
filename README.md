@@ -1,3 +1,7 @@
+Hey everyone!
+
+I'm excited to be a part of this class! Feel free to connect with me via twitter <a href='https://twitter.com/stephenprintup' target='_blank'>@stephenprintup</a> or my blog at <a href='http://www.stephenprintup.com' target='_blank'>www.stephenprintup.com</a>
+
 ### Homework #2
 
 Due Monday, 7/27

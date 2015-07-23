@@ -15,7 +15,7 @@
 // ```
 ```
 var i;
-if (n - Math.floor(n) >= .5 {
+if ((n - Math.floor(n) >= .5) {
   i = Math.ceil(n);
 } else {
   i = Math.floor(n);

@@ -139,6 +139,25 @@ CBA
 DCBA
 ```
 
+    var letterTriangle = function(n) {
+        // alphabet
+        var alph = ['A','B','C','D','E','F','G','H','I','J',
+                'K','L','M','N','O','P','Q','R','S','T',
+                'U','V','W','X','Y','Z']; 
+        var tri = '';
+        var count;
+        
+        for (i = 0; i < n; i++) {
+            // set count to i, share with inner loop
+            count = i;
+            for (count; count >= 0; count--) {
+                tri += alph[count];
+            }
+            tri += '\n';
+        }
+        return tri;
+    }
+
 
 
 **b)**

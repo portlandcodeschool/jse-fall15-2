@@ -5,7 +5,7 @@ var suits = ['Hearts','Diamonds','Spades','Clubs']
 // function()--> possible return values
 
 function checkCard(card) {
-  if (typeof card === "number" && card >= 0 && card < 52 && card%1 === 0){
+  if (typeof card === "number" && card >= 0 && card <= 51 && card%1 === 0){
     return true;
   } else {
     return false;
@@ -13,7 +13,7 @@ function checkCard(card) {
 }
 
 function checkRankSuit(rank,suit){
-  if ((rank+suit)%1 === 0 && typeof(rank+suit) === "number" && rank > 0 && rank < 14 && suit > 0 && suit < 5) {
+  if ((rank+suit)%1 === 0 && typeof(rank+suit) === "number" && rank >= 1 && rank <= 13 && suit >= 1 && suit <= 4) {
     return true;
   } else {
     return false;
@@ -90,10 +90,10 @@ assert(suit(17)===2,  "Test 16 failed");
 // Extra testing!
 // These tests check that invalid arguments produce invalid output.
 // I.e. "garbage in guarantees garbage out".
-assert(Number.isNaN(rank(52)),  "Test 21 failed");
-assert(Number.isNaN(rank("0")), "Test 22 failed");
-assert(Number.isNaN(rank(-1)),  "Test 23 failed");
-assert(Number.isNaN(rank(2.5)), "Test 24 failed");
+assert(Number.isNaN(rank(52)),       "Test 21 failed");
+assert(Number.isNaN(rank("0")),      "Test 22 failed");
+assert(Number.isNaN(rank(-1)),       "Test 23 failed");
+assert(Number.isNaN(rank(2.5)),      "Test 24 failed");
 assert(Number.isNaN(rank(undefined)),"Test 25 failed");
 
 assert(Number.isNaN(suit(52)),   "Test 26 failed");

@@ -41,7 +41,9 @@ var fractionString = function( n, d ) {
 };
 ```
 
+```
 I have the urge to make sure my fractions are all shown in their reduced form (e.g. 4/8 equals 1/2)....but I'm not sure how to do that right now.
+```
 
 **2)** _(Moderate, 10%)_
 
@@ -59,7 +61,7 @@ if ((n - Math.floor(n)) >= .5) {
 }
 ```
 
-`i = Math.round(n)'
+`i = Math.round(n)`
 
 **b)**
 ```
@@ -206,8 +208,9 @@ var and3 = function(a,b,c){
     return b;
   }
 }
-```
+
 I'm struggling with the function within a function.
+```
 
 **c)**
 Now generalize your function to handle any number of values.  You will learn better ways eventually, but for now use an array to store all the values.

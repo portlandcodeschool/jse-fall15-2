@@ -153,7 +153,7 @@ return output;
 }
 console.log(letterTriangle(4));
 
-
+//I realize we were supposed to write the whole thing, but I was SO pressed for time this week that I just did the first six--trying to get the spirit of the exercise.
 PROBLEM 3B. 
 var gifts= ['a Partridge in a Pear Tree', 'Two Turtle Doves and', 'Three French Hens', 'Four Calling Birds', 'Five Gold Rings', 'Six Geese a Laying'];
 var day = ['On the first', 'On the second', 'On the third', 'On the fourth', 'On the fifth', 'On the sixth'];
@@ -220,7 +220,9 @@ console.log(and3((6<3), false, true));
 
 var result = '';
 
-function and2(a,b) {
+function and3(a,b,c){
+  var result = '';
+  function and2(a,b) {
 
 
       if (a) {
@@ -238,9 +240,6 @@ function and2(a,b) {
 
 
 
-function and3(a,b,c){
-  var result = '';
-
   
   if (c) {
     if (and2) {
@@ -252,8 +251,9 @@ function and3(a,b,c){
   }
 
   return result;
-  console.log('bon jour');
 }
+  console.log('bon jour');
+
 
 console.log(and3(false, true, true));
 

@@ -288,7 +288,8 @@ function andN(values) {
   }
   return values[i - 1];
 }
-console.log(andN(values));
+//console.log(andN(values)); 
+//false
 
 
 //NOTE: (Logical AND) Returns expr1 if it can be converted to false; otherwise, returns expr2. Thus, when used with 
@@ -306,9 +307,7 @@ being fed and the instructions that we are giving it. These instances include, b
 You cannot use ||, "and"or a ,.  For some situations mentioed above, you could use an if/else statement to satisfy these conditions, but the code would 
 not be as eloquent. 
 
--Both && and || are short-circuit evaluations - This short-circuiting is great for performance, as it allows significant bits of calculations to be skipped. 
-
--Both && and || only evaluate to their last evaluated operator.
+-Both && and || are short-circuit evaluations - This short-circuiting is great for performance, as it allows significant bits of calculations to be skipped.
 
 
 

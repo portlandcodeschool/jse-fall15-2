@@ -2,19 +2,39 @@
 
 // function()--> possible return values
 
+var card;
+
+
 function rank(card) { // --> 1..13
+  var rankOfCard = ((card-(card%4))/4)+1;
+  return rankOfCard;
 }
 
 function suit(card) { // --> 1..4
+    var suitOfCard = (card%4)+1;
+  return suitOfCard;
 }
 
+
 function cardID(rank,suit) { // --> 0..51
+  var cardIDfound = (4*(rank-1)+(suit-1));
+  return cardIDfound;
 }
 
 function color(card) { // -->"red","black"
+  var column = (card%4);
+  if (column<=1) {
+    return 'red';
+  } else {
+    return 'black';
+  }
 }
 
 function name(card) { // --> string
+  var ranks = ['Ace','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Jack','Queen','King'];
+  var suits = ['Hearts','Diamonds','Spades','Clubs'];
+  var nameOfCard = ranks[(card-(card%4))/4] + ' of ' + suits[(card%4)];
+  return nameOfCard;
 }
 
 

@@ -1,0 +1,176 @@
+//==================== ** 1 ** ====================//
+
+**a)**
+
+  function fractionString(n, d) {
+    var rem = n%d;
+    var whole = Math.floor(n/d);
+    var proper = whole + ' ' + rem + '/' + d;
+    return proper;
+  }
+  console.log(fractionString(3, 3));
+
+**b)**
+
+  function fractionString(n, d) {
+    var rem = n%d;
+    var whole = Math.floor(n/d);
+    if (whole === 0) {
+      var proper = n + '/' + d;
+    } else if (rem === 0) {
+        var proper = whole;
+      } else {
+          var proper = whole + ' ' + rem + '/' + d;
+        }
+    return proper;
+  }
+  console.log(fractionString(3, 3));
+
+
+//==================== ** 2 ** ====================//
+
+**a)**
+
+  var i = (n - Math.floor(n)) >= .5 ? Math.ceil(n) : Math.floor(n); 
+
+**b)**
+
+  var y = (x ? true : false);
+
+**c)**
+
+  while (i > 0) {
+    console.log(i);
+    i --;
+  }
+  
+**d)**
+
+  if (a && b) {
+    x = 0;
+  } else if (a || b) {
+      x = 1;
+    } else {
+        x = 2;
+      }
+
+
+//==================== ** 3 ** ====================//
+
+**a)**
+
+function letterTriangle(n) {
+  var alpha = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+  var alphaArray = [];
+  for (i=1; i <= n; i++) {
+    for (i=0; i < n; i++) {
+      alphaArray += (alpha.slice(0, ((n+1) + i) - n)).reverse() + '\n';
+    }
+  }
+return alphaArray;
+} 
+var printTri = letterTriangle(16);
+console.log(printTri);
+
+**b)**
+
+skipped for time...
+
+
+//==================== ** 4 ** ====================//
+
+**a)**
+
+function and2(a,b) {
+  if (a) {
+    if (b) {
+      return b;
+    } else {
+      return b;
+    }
+  } else {
+    return a;
+  }
+}
+
+//var andResult = and2(0>1, true);
+//var andReal = (0>1 && true);
+//console.log('and2 = ' + andResult + ' :: andReal = ' + andReal);
+
+
+**b)**
+
+function and3(a,b,c) {
+  var val = and2(a,b);
+  if (and2(a,b)) {
+    if (c) {
+      return c;
+    } else {
+        return c;
+      }
+  } else {
+      return val;
+    }
+}
+
+var andResult = and3(1>0, 0>1, true);
+console.log(andResult);
+
+**c)**
+
+function andN(values) {
+  if (values.length > 0) {
+    for (i=0; i < values.length; i++) {
+      if (values[i]) {
+         var val = values[i];
+      } else {
+          return values[i];
+        }
+    } 
+    return val;
+  } else {
+      return true;
+    }
+}
+
+var arrayToPass = [2>1];
+var andResult = andN(arrayToPass);
+console.log(andResult);
+
+**d)**
+
+When an arguement being passed to and2 hasn't been defined it will throw an error and refuse to run. This happens even when the arguement is the second one and the first was false. With && if the first argument is false it doesn't even look at the second, so won't throw an error.
+
+var andReal = (1<0 && sdgsdg); // returns false
+
+var andResult = and2(1<0, sdgsdg); // gives an 'sdgsdg is not defined' error.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

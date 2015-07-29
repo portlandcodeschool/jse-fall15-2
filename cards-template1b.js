@@ -1,26 +1,75 @@
 // Error-detecting version
 
 function rank(card) {
+  var rankOfCard = ((card-(card%4))/4)+1;
+  if (((card%1)===0)&&(card<=51)){
+    return rankOfCard;
+  } else {
+    return NaN;
+  }
+
 }
 
 function suit(card) {
+  var suitOfCard = (card%4)+1;
+  if (((card%1)===0)&&(card<=51)){
+    return suitOfCard;
+  } else {
+    return NaN;
+  }
 }
 
 function cardID(rank,suit) {
+  var cardIDfound = (4*(rank-1)+(suit-1));
+  if (((rank%1)===0)&&(0<rank<=13)){
+    return cardIDfound;
+  } else if (((suit%1)===0)&&(0<suit<=4))
+    {return cardIDfound;
+  } else {
+    return NaN;
+  }
 }
 
 function color(card) {
+  if (((card%1)===0)&&(card<=51)){
+    var column = (card%4);
+      if (column<=1) {
+      return 'red';
+    } else {
+      return 'black';
+    }
+  } else {
+    return NaN;
+  }
+
 }
 
 function name(card) {
+  var ranks = ['Ace','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Jack','Queen','King'];
+  var suits = ['Hearts','Diamonds','Spades','Clubs'];
+  if (((card%1)===0)&&(card<=51)){
+    var nameOfCard = ranks[(card-(card%4))/4] + ' of ' + suits[(card%4)];
+    return nameOfCard;
+  } else {
+    return NaN;
+  }
 }
-
 
 
 // TESTING:
 function assert(claim,message) {
     if (!claim) console.error(message);
 }
+
+//my tests!
+assert(color(38)==='black', "test A failed");
+assert(suit(14)===3, "test B failed");
+assert(name(42)==="Jack of Spades", "test C failed");
+assert(rank(23)===4, "good, test D failed!");
+assert(color(20)==='black', "good, test E failed!");
+assert(cardID(3,2)===34, 'good, test F failed!');
+
+//
 assert(rank(0)===1,  "Test 1 failed");
 assert(rank(3)===1,  "Test 2 failed");
 assert(rank(51)===13,"Test 3 failed");
@@ -65,4 +114,6 @@ assert(Number.isNaN(name(false)),   "Test 43 failed");
 assert(Number.isNaN(name(-1)),      "Test 44 failed");
 assert(Number.isNaN(name(52)),      "Test 45 failed");
 assert(Number.isNaN(name(NaN)),     "Test 46 failed");
+
+
 

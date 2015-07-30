@@ -143,3 +143,79 @@
 // 3 French Hens
 // 2 Turtle Doves
 // and a Partridge in a Pear Tree
+
+// solution
+// Some single-loop solutions:
+// 3A
+function letterTriangle(n) {
+	var letterStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+		letters = letterStr.split('').reverse(),
+		lines = Array(n);
+	for (var i=0; i<n; ++i) {
+		lines[i]=letters.slice(-i-1).join('')+'\n';
+	}
+	return lines.join('');
+}
+
+function letterTriangle(n) {
+	var letterStr = 'ZYXWVUTSRQPONMLKJIHGFEDCBA\n',
+		lines = '';
+	for (var i=0; i<n; ++i) {
+		lines += letters.slice(-i-2);
+	}
+	return lines;
+}
+
+// A double-loop solution:
+// 3B
+function letterTriangle(n) {
+	var letterStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+		lines = '';
+	for (var line = 0; line<n; line++) {
+		for (var letter = line; letter>=0; letter--) {
+			lines+=letterStr[letter];
+		}
+		lines+='\n';
+	}
+	return lines;
+}
+
+var ordinals = ['first','second','third','fourth','fifth','sixth',
+            'seventh','eighth','ninth','tenth','eleventh','twelfth'];
+
+var items = ["a partridge in a pear tree.\n",
+            "two turtle doves, \nand ",
+            "three french hens,\n",
+            "four calling birds,\n",
+            "five... gold... rings,\n",
+            "six geese-a-laying,\n",
+            "seven swans-a-swimming,\n",
+            "eight maids-a-milking,\n",
+            "nine ladies dancing,\n",
+            "ten lords-a-leaping,\n",
+            "eleven pipers piping,\n",
+            "twelve drummers drumming,\n"]
+
+function generateDay(n) {
+    var verse = "On the "
+            +ordinals[n]
+            +" day of Xmas, my true love gave to me\n";
+    for (var i=n; i>=0; i--) {
+        verse += items[i];
+    }
+    return verse;
+}
+
+function generateSong() {
+    var song="";
+    for (var day=0; day < 12; day++) {
+        song += generateDay(day)+'\n'; //calls inner loop
+    }
+    return song;
+}
+
+console.log(generateSong());
+
+
+
+

@@ -19,6 +19,26 @@ fractionString (7, 4)
 fractionString (3, 3)  
 
 
+// solution
+
+function fractionString(n,d) {
+  var remainder = n%d,
+      wholes = Math.floor(n/d);
+            // OR: (n - remainder)/d; //always integer
+  return wholes + ' ' + remainder + '/' + d;
+}
+
+// review
+
+function fractionString(n,d) {
+	var string = ((n-(n%d))/d) + " " + n%d + "/" + d;
+	return string
+}
+
+
+fractionString (7, 4)
+fractionString (3, 3) 
+
 // []**b)** Write a second version of your function which improves the output in two special cases:
 
 // - A output string like "0 1/2" should be simplified to just "1/2";
@@ -45,7 +65,35 @@ function fractionString(n,d) {
 fractionString (1, 2); //"0 1/2"
 fractionString (3, 3); //"1 0/3"
 
+// solution
 
+//Part B:
+function fractionString(n,d) {
+  if (!n) // if numerator is zero, return early with just 0
+  	return "0";
+
+  //otherwise:
+  var remainder = n%d,
+      wholes = Math.floor(n/d),
+              // OR: (n - remainder)/d;
+      output = ''; //initially blank output, augmented below
+ // !!setting output as a string that can be added to 
+
+  // These conditions are independent; either or both may be true:
+  
+  if (wholes) // if non-zero whole units
+    output += wholes;  // include it in output
+
+  if (wholes && remainder)
+    output += ' ';
+
+// !!Seperating the inserting the space from inserting the remainder
+
+  if (remainder) // if non-zero remainer,
+    output += (remainder + '/' + d); // include it too
+
+  return output;
+}
 
 // ***********************Week 1 Question 5
 
@@ -95,3 +143,38 @@ fractionString (3, 3); //"1 0/3"
 
 
 // ***********  end  ************Week 1 Question 5
+
+
+// Solution
+// Part A:
+function fractionString(n,d) {
+  var remainder = n%d,
+      wholes = Math.floor(n/d);
+            // OR: (n - remainder)/d; //always integer
+  return wholes + ' ' + remainder + '/' + d;
+}
+
+//Part B:
+function fractionString(n,d) {
+  if (!n) // if numerator is zero, return early with just 0
+  	return "0";
+
+  //otherwise:
+  var remainder = n%d,
+      wholes = Math.floor(n/d),
+              // OR: (n - remainder)/d;
+      output = ''; //initially blank output, augmented below
+
+  // These conditions are independent; either or both may be true:
+  
+  if (wholes) // if non-zero whole units
+    output += wholes;  // include it in output
+
+  if (wholes && remainder)
+    output += ' ';
+
+  if (remainder) // if non-zero remainer,
+    output += (remainder + '/' + d); // include it too
+
+  return output;
+}

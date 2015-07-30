@@ -119,8 +119,37 @@ if (a) {
   }
 }
 ```
+// solutions for d 
 
-// Solution
+var x;
+if (a && b) {
+   x = 0;
+} else if (a || b) {
+  x = 1;
+} else {
+  x = 2;
+}
+OR
+
+var x = (a && b)? 0: ((a||b)? 1: 2);
+OR
+
+var x = 0;
+if (!a) x++;
+if (!b) x++;
+OR
+
+var x = (a? 0: 1) + (b? 0: 1);
+OR
+
+var x = (!a*1) + (!b*1);
+OR
+
+var x = !a + !b;
+A brief explanation of the last two solutions: whatever value a starts with, !a will be the opposite boolean, and that will be coerced (auto-converted) to either 0 or 1 by the numeric operation (!a*1) or merely the addition (boolean + boolean). An initially falsish a will produce 1 and truish a will produce 0, likewise with b, so the sum x is the number of falsish inputs.
+
+
+// Solutions:
 a)
 
 Original:
@@ -218,4 +247,4 @@ var x = (!a*1) + (!b*1);
 OR
 
 var x = !a + !b;
-A brief explanation of the last two solutions: whatever value a starts with, !a will be the opposite boolean, and that will be coerced (auto-converted) to either 0 or 1 by the numeric operation (!a*1) or merely the addition (boolean + boolean). An initially falsish a will produce 1 and truish a will produce 0, likewise with b, so the sum x is the number of falsish inputs.
+// !!A brief explanation of the last two solutions: whatever value a starts with, !a will be the opposite boolean, and that will be coerced (auto-converted) to either 0 or 1 by the numeric operation (!a*1) or merely the addition (boolean + boolean). An initially falsish a will produce 1 and truish a will produce 0, likewise with b, so the sum x is the number of falsish inputs.
